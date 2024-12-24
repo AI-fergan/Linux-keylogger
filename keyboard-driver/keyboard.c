@@ -175,11 +175,12 @@ key_event keyboard_handler(unsigned char code) {
     if(code == 0x0E)
         return event;
 
-    if(update_metadata(code)) //update ctrl/shift/alt/capslock
+    //update ctrl/shift/alt/capslock
+    if(update_metadata(code))
         return event;
 
     if(is_small_letter(symbols[0][code]) || is_number(symbols[0][code]) || is_special_char(symbols[0][code])) {
-        event.scancode = code; // // get key scancode and store the key event
+        event.scancode = code; //get key scancode and store the key event
         event.data = m_keyboard;
     }
 

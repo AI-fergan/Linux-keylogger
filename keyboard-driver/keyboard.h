@@ -1,6 +1,8 @@
 #ifndef KEYBOARD_H
 #define KEYBOARD_H
 
+#include <stdio.h>
+
 #define SYMBOLS_TABLE_SIZE 256
 #define SYMBOLS_TABLE_TYPES 3
 
