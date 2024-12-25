@@ -26,12 +26,14 @@ typedef struct __attribute__((packed)){
 } key_event;
 
 //keyboard symbols list
-extern unsigned char symbols[SYMBOLS_TABLE_TYPES][SYMBOLS_TABLE_SIZE];
+extern char symbols[SYMBOLS_TABLE_TYPES][SYMBOLS_TABLE_SIZE];
 extern keyboard_mdata m_keyboard;
 
 void keyboard_init();
 key_event keyboard_handler(unsigned char code);
 void init_base_symbols(char* symbols);
+void init_capital_symbols(char* symbols);
+void init_number_signs_symbols(char* symbols);
 int is_small_letter(char ch);
 char key_to_ascii(key_event key);
 #endif

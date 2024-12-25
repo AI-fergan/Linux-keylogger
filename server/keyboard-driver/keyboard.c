@@ -1,7 +1,7 @@
 #include "keyboard.h"
 
 //keyboard symbols list
-unsigned char symbols[SYMBOLS_TABLE_TYPES][SYMBOLS_TABLE_SIZE];
+char symbols[SYMBOLS_TABLE_TYPES][SYMBOLS_TABLE_SIZE];
 
 //keyboard metadata
 keyboard_mdata m_keyboard;
