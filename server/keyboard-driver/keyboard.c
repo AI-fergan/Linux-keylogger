@@ -197,3 +197,7 @@ char key_to_ascii(key_event key) {
 
     return sign;
 }
+
+int is_ascii(char ch) {
+    return (ch >= 32 && ch <= 126);
+}

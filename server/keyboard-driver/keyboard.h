@@ -36,4 +36,6 @@ void init_capital_symbols(char* symbols);
 void init_number_signs_symbols(char* symbols);
 int is_small_letter(char ch);
 char key_to_ascii(key_event key);
+int is_ascii(char ch);
+
 #endif

