@@ -8,9 +8,10 @@
 #include <arpa/inet.h>
 #include <linux/input.h>
 #include <fstream>
-#include "keyboard-driver/keyboard.h"
+#include "../keyboard-driver/keyboard.h"
 #include <mutex>
 
+/* Server Metadata */
 #define PORT 1393
 #define LOG_FILE_SIZE 4096
 #define MAX_LOG_FILES 100
@@ -24,3 +25,6 @@ using std::thread;
 using std::endl;
 using std::streampos;
 using std::mutex;
+using std::fstream;
+using std::lock_guard;
+using std::cerr;

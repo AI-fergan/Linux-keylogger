@@ -55,13 +55,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "files.associations": {
-    "fcntl.h": "c",
-    "stat.h": "c",
-    "stdio.h": "c",
-    "thread": "cpp",
-    "*.tcc": "cpp",
-    "fstream": "cpp"
-  }
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
