@@ -29,6 +29,7 @@ typedef struct __attribute__((packed)){
 extern unsigned char symbols[SYMBOLS_TABLE_TYPES][SYMBOLS_TABLE_SIZE];
 extern keyboard_mdata m_keyboard;
 
+void keyboard_init();
 key_event keyboard_handler(unsigned char code);
 void init_base_symbols(char* symbols);
 int is_small_letter(char ch);
